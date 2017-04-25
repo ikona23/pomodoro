@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var count = parseInt($('#num').html())
-    var breakcount = parseInt($('#breaknum').html())
+    var breakCount = parseInt($('#breaknum').html())
 
     $('#reset').hide()
 
@@ -14,18 +14,20 @@ $(document).ready(function() {
             count -= 1
             if (count === 0) {
                 clearInterval(counter)
-                $('#reset').show()
+                var startBreak=setInterval(breakTimer,1000)
+                $('#num').hide()
             }
             $("#num").html(count)
 
-            function breakDiv(){
+            function breakTimer(){
                 $('#timeType').html("Party on!:")
                 $('#breaknum').show()
                 breakCount -=1
-
-
+                if(breakCount===0){
+                    clearInterval(startBreak)
+                }
+                $("#breaknum").html(breakCount)
             }
-            $("#breaknum").html()
         }
     })
 
