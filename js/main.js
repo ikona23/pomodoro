@@ -10,6 +10,7 @@ $(document).ready(function() {
         function timer() {
             $('#start, #add5min,#ttl,#time,#min5Break, #min5min,#title2,#breaknum,#add5Break').hide()
             $("#timeType").html("Session time:")
+            $("#timeType").show()
             $("h3").text("Time to do some work")
             count -= 1
             if (count === 0) {
@@ -22,13 +23,25 @@ $(document).ready(function() {
             function breakTimer(){
                 $('#timeType').html("Party on!:")
                 $('#breaknum').show()
+                $('#timeType').show()
                 breakCount -=1
                 if(breakCount===0){
                     clearInterval(startBreak)
+                    $('#reset').show()
+                    $('#breaknum,#timeType').hide()
                 }
                 $("#breaknum").html(breakCount)
             }
         }
+    })
+
+    $('#reset').click(function(){
+        count=25
+        breakCount=25
+        $('#breaknum').html(breakCount)
+        $('#num').html(count)
+        $('#start, #num, #add5min,#ttl,#time,#min5Break,#add5Break,#min5min,#title2,#breaknum').show()
+        $('#reset').hide()
     })
 
     $("#min5min").click(function() {
@@ -42,18 +55,14 @@ $(document).ready(function() {
         $("#num").html(count)
     })
 
-    $("#reset").click(function(){
-        counter ==100
-    })
-
     $("#min5Break").click(function() {
-        if (breakcount > 0)
-            breakcount -= 5
-        $("#breaknum").html(breakcount)
+        if (breakCount > 0)
+            breakCount -= 5
+        $("#breaknum").html(breakCount)
     })
 
     $("#add5Break").click(function() {
-        breakcount += 5
-        $("#breaknum").html(breakcount)
+        breakCount += 5
+        $("#breaknum").html(breakCount)
     })
 })
