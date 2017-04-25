@@ -6,6 +6,7 @@ $(document).ready(function() {
 
     $("#start").click(function() {
         var counter = setInterval(timer, 1000)
+        count*=60
 
         function timer() {
             $('#start, #add5min,#ttl,#time,#min5Break, #min5min,#title2,#breaknum,#add5Break').hide()
