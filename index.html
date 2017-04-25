@@ -9,34 +9,45 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- First include jquery js -->
+    <link href="styles/main.css" rel="stylesheet" type="text/css">
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/main.js"type="text/javascript"></script>
     <!-- Then include bootstrap js -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     </style>
 </head>
 
 <body>
-<div class="container">
-    <h1>pomodoro clock</h1>
-    <h4>another one</h4>
-    <div class="seshTimeDiv">
-        <h1 div="titleMain">Sesh Time</h1>
-        <a href="#" class="btn btn-primary" id="min5min">-</a>
-        <h2 id="num">5</h2>
-        <a href="#" class= "btn btn-primary" id="add5min">+</a>
-        <a href="#" class= "btn btn-primary" id="reset">Reset</a>
-    </div>
-    <div class="breakDiv">
-        <h1 div="title2">Break Time</h1>
-        <a href="#" class="btn btn-primary" id="min5Break">-</a>
-        <h2 id="breaknum">5</h2>
-        <a href="#" class= "btn btn-primary" id="add5minBreak">+</a>
-        <a href="#" class= "btn btn-primary" id="start">Start</a>
-    </div>
-</div>
-</body>
+<section class="section content has-text-centered">
+    <div class="container">
+        <div class="heading">
+            <h1 div class="title is=1" id="ttl">Timebox</h1>
+        </div>
 
+        <h4 class="subtititle" id = "time">your time</h4>
+    </div>
+
+
+    <h1 id="timeType"></h1>
+    <a href="#" class="button is-inverted" id="min5min">-</a>
+    <h2 class="column" id="num">5</h2>
+    <a href="#" class="button" id="add5min">+</a>
+    <a href="#" class="button is-2" id="reset">Reset</a>
+
+
+    <div id="breakDiv" class="block">
+        <h1 div id="title2">Timebreak</h1>
+        <a href="#" class="button is-outlined" id="min5Break">-</a>
+        <h2 id="breaknum">5</h2>
+        <a href="#" class="button" id="add5Break">+</a>
+        <a href="#" class="button" id="start">Start</a>
+    </div>
+</section>
+
+</body>
 </html>
