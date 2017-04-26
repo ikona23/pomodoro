@@ -14,6 +14,7 @@ $(document).ready(function() {
             $("#timeType").html("Session time:")
             $("#timeType").show()
             $("h3").text("Time to do some work")
+            $('#num').css( "font-size", "100px" )
             count -= 1
             if (count === 0) {
                 clearInterval(counter)
@@ -30,6 +31,7 @@ $(document).ready(function() {
                 $('#timeType').html("Party on!: ")
                 $('#breaknum').show()
                 $('#timeType').show()
+                $('#breaknum').css( "font-size", "100px" );
                 breakCount -=1
                 if(breakCount===0){
                     clearInterval(startBreak)
