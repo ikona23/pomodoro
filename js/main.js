@@ -8,6 +8,7 @@ $(document).ready(function() {
         var counter = setInterval(timer, 1000)
         count*=60
 
+
         function timer() {
             $('#start, #add5min,#ttl,#time,#min5Break, #min5min,#title2,#breaknum,#add5Break').hide()
             $("#timeType").html("Session time:")
@@ -19,7 +20,9 @@ $(document).ready(function() {
                 var startBreak=setInterval(breakTimer,1000)
                 $('#num').hide()
             }
-            $("#num").html(count)
+            if(count%60>=10){
+                $("#num").html(Math.floor(count/60)+":"+count%60)
+            }
 
             function breakTimer(){
                 $('#timeType').html("Party on!:")
@@ -31,7 +34,9 @@ $(document).ready(function() {
                     $('#reset').show()
                     $('#breaknum,#timeType').hide()
                 }
-                $("#breaknum").html(breakCount)
+                if(breakCount%60>=10){
+                    $("#breaknum").html(Math.floor(breakCount/60)+":"+breakCount%60)
+                }
             }
         }
     })
@@ -67,3 +72,15 @@ $(document).ready(function() {
         $("#breaknum").html(breakCount)
     })
 })
+
+8.65
+12
+10
+11,42
+10,27
+8.2
+9,57
+11,28
+12.88
+2
+
